@@ -29,9 +29,16 @@ namespace Graph3
 
             if (dialog == DialogResult.OK)
             {
-                Image img = Image.FromFile(openFileDialog1.FileName);
+                try
+                {
+                    Image img = Image.FromFile(openFileDialog1.FileName);
 
-                pictureBox1.Image = img;
+                    pictureBox1.Image = img;
+                }
+                catch (Exception)
+                {
+
+                }
             }
 
         }
@@ -44,58 +51,96 @@ namespace Graph3
         private void DialateButton_Click(object sender, EventArgs e)
         {
 
+            try
+            {
 
-            Image img = pictureBox1.Image;
+                Image img = pictureBox1.Image;
 
-            Bitmap bitmap = (Bitmap)img;
+                Bitmap bitmap = (Bitmap)img;
 
-            bitmap = bitmap.DilateAndErodeFilter((int)matrixSizeUpAndDown.Value, BitmapExtensions.MorphologyType.Dilation,blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
+                bitmap = bitmap.DilateAndErodeFilter((int)matrixSizeUpAndDown.Value, BitmapExtensions.MorphologyType.Dilation, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
 
-            pictureBox1.Image = bitmap;
+                pictureBox1.Image = bitmap;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void EroseButton_Click(object sender, EventArgs e)
         {
-            Image img = pictureBox1.Image;
+            try
+            {
+                Image img = pictureBox1.Image;
 
-            Bitmap bitmap = (Bitmap)img;
+                Bitmap bitmap = (Bitmap)img;
 
-            bitmap = bitmap.DilateAndErodeFilter((int)matrixSizeUpAndDown.Value, BitmapExtensions.MorphologyType.Erosion, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
+                bitmap = bitmap.DilateAndErodeFilter((int)matrixSizeUpAndDown.Value, BitmapExtensions.MorphologyType.Erosion, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
 
-            pictureBox1.Image = bitmap;
+                pictureBox1.Image = bitmap;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void OpenMorphologyButton_Click(object sender, EventArgs e)
         {
-            Image img = pictureBox1.Image;
+            try
+            {
 
-            Bitmap bitmap = (Bitmap)img;
+                Image img = pictureBox1.Image;
 
-            bitmap = bitmap.OpenMorphologyFilter((int)matrixSizeUpAndDown.Value, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
+                Bitmap bitmap = (Bitmap)img;
 
-            pictureBox1.Image = bitmap;
+                bitmap = bitmap.OpenMorphologyFilter((int)matrixSizeUpAndDown.Value, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
+
+                pictureBox1.Image = bitmap;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void CloseMorphologyButton_Click(object sender, EventArgs e)
         {
-            Image img = pictureBox1.Image;
 
-            Bitmap bitmap = (Bitmap)img;
+            try
+            {
+                Image img = pictureBox1.Image;
 
-            bitmap = bitmap.CloseMorphologyFilter((int)matrixSizeUpAndDown.Value, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
+                Bitmap bitmap = (Bitmap)img;
 
-            pictureBox1.Image = bitmap;
+                bitmap = bitmap.CloseMorphologyFilter((int)matrixSizeUpAndDown.Value, blueCheckBox.Checked, greenCheckbox.Checked, redCheckBox.Checked);
+
+                pictureBox1.Image = bitmap;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void LinearConstrantButton_Click(object sender, EventArgs e)
         {
-            Image img = pictureBox1.Image;
 
-            Bitmap bitmap = (Bitmap)img;
+            try
+            {
+                Image img = pictureBox1.Image;
 
-            bitmap = bitmap.LinearContrast(0, 255);
+                Bitmap bitmap = (Bitmap)img;
 
-            pictureBox1.Image = bitmap;
+                bitmap = bitmap.LinearContrast(0, 255);
+
+                pictureBox1.Image = bitmap;
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
