@@ -1,0 +1,10 @@
+C:\GraphLab3\Graph3\bin\Debug\Graph3.exe.config
+C:\GraphLab3\Graph3\bin\Debug\Graph3.exe
+C:\GraphLab3\Graph3\bin\Debug\Graph3.pdb
+C:\GraphLab3\Graph3\obj\Debug\Graph3.csprojAssemblyReference.cache
+C:\GraphLab3\Graph3\obj\Debug\Graph3.Form1.resources
+C:\GraphLab3\Graph3\obj\Debug\Graph3.Properties.Resources.resources
+C:\GraphLab3\Graph3\obj\Debug\Graph3.csproj.GenerateResource.cache
+C:\GraphLab3\Graph3\obj\Debug\Graph3.csproj.CoreCompileInputs.cache
+C:\GraphLab3\Graph3\obj\Debug\Graph3.exe
+C:\GraphLab3\Graph3\obj\Debug\Graph3.pdb
