@@ -201,7 +201,7 @@ namespace Graph3
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LoadButton);
             this.Name = "Form1";
-            this.Text = "monarch_in_may1.jpg";
+            this.Text = "Lab3Graph";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrixSizeUpAndDown)).EndInit();
